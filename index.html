@@ -15,7 +15,7 @@
 <body>
   <header class="header">
     <a href="#" class="logo">Thais</a>
-    <i class="fa-solid fa-bars menu-icon" id="menu-icon"></i>
+    
     <nav class="navbar">
       <a href="#home" class="active">Inicio</a>
       <a href="#services">Serviços</a>
@@ -24,6 +24,7 @@
       <a href="#experience">Experiência</a>
       <a href="#contact">Contato</a>
     </nav>
+    <div id="menu-icon"><i class="fa solid fas fa-bars menu-icon"></i></div>
   </header>
 
   <section class="home" id="home">
@@ -54,7 +55,7 @@
       </div>
       <div class="service-box">
         <div class="service-info">
-          <h4>Desenvolvedor Front End</h4>
+          <h4>Desenvolvedor Front-End</h4>
           <p>Trabalho com design mais </p>
         </div>
       </div>
@@ -181,5 +182,13 @@
   <!-- wow animation-->
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/trans.js"></script>
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.querySelector('.navbar');
+
+    menuIcon.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
