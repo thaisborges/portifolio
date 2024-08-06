@@ -317,21 +317,23 @@ span{
 
 .services {
   background: var(--second-bg-color);
+
 }
 .services-container {
-  display: grid;
+  position: relative;
+  height: 100%;
   grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  gap: 2.5rem;
+
 }
 
 .service-box {
   background-color: var(--main-color);
   border: 1px solid var(--logo-color);
-  height: 300px;
   border-radius: 3rem;
   cursor: pointer;
   transition: 0.3s ease;
+  overflow: hidden;
+  margin-bottom: 30px;
 }
 
 .service-box:hover {
@@ -340,69 +342,66 @@ span{
   transform: scale(1.03);
   border: 1px solid var(--main-color);
 }
-.service-box .service-info {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  max-height: 200px;
-  justify-content: center;
-  align-items: baseline;
-  padding: 5em;
-}
-.service-info h4 {
+
+.service-box .service-info h4 {
   font-size: 2.3rem;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 5px;
+  padding: 10px 80px;
+
 }
 
-.service-info {
+.service-info p {
   font-size: 1.6rem;
   font-weight: 400;
-  max-height: 100px;
-  margin: auto;
+  margin-bottom: 30px;
+  padding: 5px 80px;
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:588px){
   .services {  
-    padding: 0;
     margin: 0;
-    width: 100%;
+    max-width: 100%;
+    position: relative;
+    padding: 90px 50px;
   }
-
+  
   .services-container {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 0;
+    align-items: center;
   }
 
   .services .service-box {
-    padding: 1rem;
-    margin: 1rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    box-sizing: border-box;
+    width: 100%;
+
   }
+
+
   .service .service-info {
     text-align: center;
   }
-
-  .service  .service-info  h4{
-    border: 1px solid red;
-    font-size: 2.3rem;
+  
+  .service-info  h4 {
+    font-size:2rem;
     font-weight: 500;
-    margin: 0;
-    padding: 0;
+    text-align: center;
+    padding: 40px;  
   }
 
   .services .service-info  p {
+    border: 1px solid red;
     font-size: 2rem;
+    justify-content: start;
+    align-items: center;
     font-weight: 300;
     max-height: none;
-    margin: 0;
-    padding: 0;
+    text-align: start;
+    padding: 40px;
+    margin: 5px;
   }
 } 
   
@@ -749,9 +748,7 @@ span{
   section {
     padding: 10rem 3% 2rem;
   }
-  .services {
-    padding-bottom: 5rem;
-  }
+
   .footer {
     padding: 5rem 3%;
   }
