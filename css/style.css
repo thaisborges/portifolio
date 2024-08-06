@@ -352,10 +352,10 @@ span{
 }
 
 .service-info p {
+  margin: 0;
   font-size: 1.6rem;
   font-weight: 400;
-  margin-bottom: 30px;
-  padding: 5px 80px;
+  padding: 10px 10px;
 }
 
 @media screen and (max-width:588px){
@@ -364,43 +364,31 @@ span{
     max-width: 100%;
     position: relative;
     padding: 90px 50px;
+    width: 100%;
   }
   
   .services-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
+    margin-left: auto;
+    padding-top: 20px 20px;
   }
-
-  .services .service-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-
-  }
-
 
   .service .service-info {
     text-align: center;
   }
   
-  .service-info  h4 {
+  .service-box .service-info  h4 {
+    margin: 5px;
     font-size:2rem;
     font-weight: 500;
+    padding: 30px 10px;
     text-align: center;
-    padding: 40px;  
-  }
-
-  .services .service-info  p {
+  }  
+  
+  .service-info  p {
+    margin-bottom: 10px;
     font-size: 2rem;
-    justify-content: start;
-    align-items: center;
     font-weight: 300;
-    max-height: none;
-    text-align: start;
-    padding: 40px;
-    margin: 3px;
   }
 } 
   
