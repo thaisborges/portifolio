@@ -393,7 +393,6 @@ span{
   }
 
   .services .service-info  p {
-    border: 1px solid red;
     font-size: 2rem;
     justify-content: start;
     align-items: center;
