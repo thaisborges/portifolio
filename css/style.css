@@ -652,35 +652,65 @@ span{
   margin-bottom: 3rem;
   color: var(--bg-color);
 }
+
 .contact span {
   margin-bottom: 3rem;
   color: white;
 }
+
 .contact form {
   max-width: 70rem;
   margin: 1rem auto;
   margin-bottom: 3rem;
   text-align: center;
 }
+
 .contact form .input-box {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .contact form .input-box input,
 .contact form textarea {
   width: 100%;
   padding: 1.5rem;
   font-size: 1.6rem;
-  color: var(--text-color);
+  color: var(--header-color);
   background: var(--bg-color);
   border-radius: 0.8rem;
-  border: 2px solid var(--main-color);
+  border: 2px solid var(--logo-color);
   margin: 1rem 0;
   resize: none;
 }
+
 .contact form .btn {
   margin-top: 2rem;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.input-group select, .input-group input {
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--cinza-color);
+  background: var(--bg-color);
+  border-radius: 0.8rem;
+  border: 2px solid var(--logo-color);
+  margin: 1rem 0;
+}
+
+.input-group select {
+  width: 8rem; /* Defina a largura para o tamanho desejado */
+  padding: 1.5rem;
+  box-sizing: border-box;
+  flex: none; /* Impede que o select ocupe mais espaço que o necessário */
+  margin-right: 10px;
 }
 
 /* Footer section */
