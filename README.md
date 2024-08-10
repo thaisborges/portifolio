@@ -11,7 +11,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O projeto é uma leading page do portfolio com agregador de links. 
+O projeto é uma landing page do portfolio com agregador de links. 
 
 <br>
 
