@@ -18,6 +18,7 @@
   --text-color: #FFFF;
   --main-color: #8C4E37;
   --header-color: #8C4E37;
+  --nav-color: #e48663;
   --header-transparent: #8c4e3741;
   --logo-color: #F2F2F0;
   --cinza-color: #6D808C;
@@ -49,8 +50,7 @@ html::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 6rem;
-  background-color: var(--header-color);
+  padding: 2rem 10rem;
   transition: background 0.3s ease;
   filter: drop-shadow(10px);
   position: fixed;
@@ -59,6 +59,17 @@ html::-webkit-scrollbar-thumb {
   width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para destaque */
+}
+
+header.rolagem{
+  background-color: var(--header-color);
+}
+
+header.rolagem 
+.navbar a:hover,
+.navbar a.active {
+  color: var(--bg-color);
+  border-bottom: 3px solid var(--logo-color);
 }
 
 .transparent {
@@ -88,8 +99,8 @@ html::-webkit-scrollbar-thumb {
 
 .navbar a:hover,
 .navbar a.active {
-  color: var(--bg-color);
-  border-bottom: 3px solid var(--cinza-color);
+  color: var(--nav-color);
+  border-bottom: 3px solid var(--logo-color);
 }
 
 /* Menu Hambúrguer */
@@ -148,6 +159,7 @@ html::-webkit-scrollbar-thumb {
   .logo {
     font-weight: bold; /* Torna a fonte mais grossa */
     font-size: 2.5rem; /* Ajuste o tamanho da fonte conforme necessário */
+    padding: 4rem;
   }
 
   .navbar {
@@ -190,18 +202,19 @@ html::-webkit-scrollbar-thumb {
 
 /* Espaçamento para o conteúdo das seções */
 section {
-  padding-top: 80px; /* Ajuste conforme a altura do seu header */
+  padding: 70px;
 }
 
 /* Home Section */
 .home {
   display: flex;
-  justify-content:center;
-  align-items: center;
+  justify-content: center;
   gap: 8rem;
+  align-items: center;
   background-color: var( --bg-color);
-  padding: 30px;
-  margin: 80px;
+  padding: 9rem;
+  margin: 60px 0;
+  width: 100%;
 }
 
 .home-content h1 {
@@ -357,8 +370,9 @@ span{
 @media (max-width: 995px) {
   .home {
     flex-direction: column;
-    margin: 10rem 4rem;
+    margin: 10rem 0 10px 0;
     align-items: center;
+    padding: 4rem;
   }
   .home-content {
     text-align: center;
@@ -467,8 +481,18 @@ span{
 
 @media (max-width: 768px) {
   .service-box {
-    width: calc(80% - 80px); /* Ajuste a largura dos cards para caberem 1 por linha, com margens */
-    margin: 30px;
+    width: calc(100% - 100px); /* Ajuste a largura dos cards para caberem 1 por linha, com margens */
+    margin: 20px;
+  }
+
+  .service-info h4 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .services {
+    padding: 0 20px;
   }
 }
 
@@ -726,72 +750,48 @@ span{
 /* Contact section */
 .contact {
   background: var(--terceira-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
 .contact h2 {
-  margin-bottom: 3rem;
   color: var(--bg-color);
+  margin-bottom: 0;
 }
 
 .contact span {
-  margin-bottom: 3rem;
-  color: white;
+  color: var(--logo-color);
 }
 
-.contact form {
-  max-width: 70rem;
-  margin: 1rem auto;
-  margin-bottom: 3rem;
+.infoContact {
+  border: 2px solid var(--logo-color);
+  border-radius: 2rem;
+  transition: 0.3s ease;
+  overflow: hidden;
+  padding: 40px 40px;
+  margin: 20px 300px;
+  width: auto;
+  box-sizing: border-box; /* Garante que o padding e border sejam incluídos na largura total */
+  position: relative;
+  background: #BF8C6F;
+}
+
+.infoContact p {
+  color: var(--bg-color);
+  font-size: 15px;
   text-align: center;
+  font-weight: 600;
+
 }
 
-.contact form .input-box {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+@media screen and (max-width:600px){
+  .infoContact{
+    margin: 1rem;
+    margin: 1 5rem;
+  }
 
-.contact form .input-box input,
-.contact form textarea {
-  width: 100%;
-  padding: 1.5rem;
-  font-size: 1.6rem;
-  color: var(--header-color);
-  background: var(--bg-color);
-  border-radius: 0.8rem;
-  border: 2px solid var(--logo-color);
-  margin: 1rem 0;
-  resize: none;
-}
-
-.contact form .btn {
-  margin-top: 2rem;
-}
-
-.input-group {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.5rem;
-  width: 100%;
-}
-
-.input-group select,
-.input-group input {
-  padding: 1.5rem;
-  font-size: 1.6rem;
-  color: var(--cinza-color);
-  background: var(--bg-color);
-  border-radius: 0.8rem;
-  border: 2px solid var(--logo-color);
-  margin: 1rem 0;
-}
-
-.input-group select {
-  width: 8rem; /* Defina a largura para o tamanho desejado */
-  padding: 1.5rem;
-  box-sizing: border-box;
-  flex: none; /* Impede que o select ocupe mais espaço que o necessário */
-  margin-right: 10px;
 }
 
 /* Footer section */
@@ -929,6 +929,25 @@ span{
   section {
     padding: 10rem 3% 2rem;
   }
+
+
+
+  .footer {
+    padding: 5rem 3%;
+  }
+
+}
+
+@media(max-width:600px){
+  .header {   
+    padding: 5rem 3%;
+  }
+
+
+  section {
+    padding: 10rem 3% 2rem;
+  }
+
 
   .footer {
     padding: 5rem 3%;
